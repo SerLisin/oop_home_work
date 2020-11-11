@@ -20,6 +20,12 @@ ostream& operator<< (ostream &out,const dbEndl &endll)
     return out;
 }
 
+ostream& endlll(ostream& out)
+{
+     out.flush();
+     out << endl << endl;
+     return out;
+}
 
 
 int main(int argc, char** args){
@@ -55,6 +61,8 @@ int main(int argc, char** args){
 	cout << "endll test start here" << endll;
 	cout << "endll test stop here" << endll;
 	
+        cout << "endll test start here" << endlll;
+        cout << "endll test stop here" << endll;
 
 	return 0;
 }
