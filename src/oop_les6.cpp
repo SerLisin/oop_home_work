@@ -20,6 +20,7 @@ ostream& operator<< (ostream &out,const dbEndl &endll)
     return out;
 }
 
+// another way
 ostream& endlll(ostream& out)
 {
      out.flush();
@@ -54,6 +55,18 @@ int main(int argc, char** args){
 	int number;
 	myStr >> number;
 	cout << "The number is " << number << endl << endl;
+
+// another way
+        cout << "Enter integer number: ";
+        while (!(cin >> number))
+        {
+            cerr << "Invalid number. Try again!" << endl;
+            cin.clear();
+            while (cin.get() != '\n')
+                   continue;
+            cout << "Enter integer number: ";
+         }
+         cout << "The number is " << number << endl;
 
 // Task2
 	cout << endl << "******************* Task 2 **********************" << endl << endl;	
